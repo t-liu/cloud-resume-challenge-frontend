@@ -20,5 +20,5 @@ Static HTML webpage with custom CSS hosted on AWS as part of the Cloud Resume Ch
     * YAML
 
 ## Contributing
-Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog ヽ(•‿•)ノ
+Pull requests are welcome.  E-mail me if this repo was helpful.  Also, send bitcoins to help feed me and my dog. <br/> ヽ(•‿•)ノ <br/>
 ![Alt text](dog.jpg?raw=true "Loyal Companion")
