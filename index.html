@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+    <title>Thomas S. Liu | Current: Integration Engineer | Future: Enterprise Architect (Maybe, One Day)</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="author" content="Thomas Liu">
+    <meta name="keywords" content="Cloud, Resume, Challenge" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+    <!-- IMPORT STYLES (Google Fonts)-->
+    <style>
+        @font-face {
+            font-family: Raleway;
+            src: url(fonts/Raleway-VariableFont_wght.ttf);
+        }
+        @font-face {
+            font-family: Roboto;
+            src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- call api js to get website count-->
+    <script src="resumeCount.js"></script>
+
+    <div id="doc">
+        <div id="inner">      
+            <div id="header">
+                <h2 class="name ral">Thomas S. Liu</h2>
+                <ul class="contact-info ral">
+                    <li class="contact-info"><img src="img/location.png" alt="location" class="icons"> Washington, DC </li>
+                    <li class="contact-info"><img src="img/linkedin.png" alt="linkedin" class="icons"><a href="https://www.linkedin.com/in/thomas-liu-dc" target="_blank"> linkedin.com/in/thomas-liu-dc </a></li>
+                    <li class="contact-info"><img src="img/github.png" alt="github" class="icons"><a href="https://www.github.com/t-liu" target="_blank"> github.com/t-liu </a></li>
+                    <li class="contact-info"><img src="img/mail.png" alt="mail" class="icons"><a href="mailto:thomas.s.liu@gmail.com"> thomas.s.liu@gmail.com </a></li>
+                </ul>
+            </div><!--// header -->
+
+            <div id="body">
+                
+                <div class="section">        
+                    <p class="subtitle ral">Work Experience</p>
+                            
+                    <div class="job ral">
+                        <h3>Booz Allen Hamilton</h3>
+                        <h4>
+                            <div class="left">Integration Engineer</div>
+                            <div class="right">March 2016 - Present</div>
+                        </h4>
+                        <ul>
+                            <li>Designed and developed an integration using Mulesoft Anypoint Studio that sourced data from Workday and load to Salesforce-based risk management application; leveraged AWS SQS for SFDC status checks.</li>
+                            <li>Refactored an integration that sends employee badging information from on-premise MS SQL Server to Dynamics 365 via Microsoft Graph API with OData system query; include distributed caching of bearer tokens.</li>
+                            <li>Redesigned an API that sends email notification to include Apache Kafka for message queuing and MongoDB for persistent storage; improved reliability and guarantee delivery. </li>
+                            <li>Refactored Ansible playbooks and templates to include Hashicorp Vault API calls for retrieving application level passwords and secrets.</li>
+                            <li>Developed and updated Postman collections and environments to debug, test, and verify APIs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job ral">
+                        <h3>COMPAS Technology, LLC</h3>
+                        <h4>
+                            <div class="left">Implementation Engineer</div>
+                            <div class="right">October 2014 - March 2016</div>
+                        </h4>
+                        <ul>
+                            <li>Created custom SQL scripts to migrate and transform client's data from legacy applicant tracking system to firm's proprietary SaaS on backend MS SQL Server.</li>
+                            <li>Updated inline SQL queries in firm's application codebase on long running web pages by rewriting selects, joins, and filters; merging and committing to a master git repository on BitBucket.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job ral">
+                        <h3>BRE Properties</h3>
+                        <h4>
+                            <div class="left">Business Intelligence Developer</div>
+                            <div class="right">May 2013 - October 2014</div>
+                        </h4>
+                        <ul>
+                            <li>Supported installation and configuration of Oracle EPM using AWS EC2, S3, and ELB for proof of vlaue on migrating business intelligence platform to AWS.</li>
+                            <li>Refactored ETL processes developed in Informatica to include variables, Windows batch files, and parameter files; reduced duplicate code and introduced code reusability.</li>
+                            <li>Developed bash scripts to effectively archive high available contents for Tableau Server on a nightly basis and recycle application services on a weekly basis.</li>
+                        </ul>
+                    </div>
+                </div><!-- work -->
+
+                <div class="section">        
+                    <p class="subtitle ral">Education</p>
+                            
+                    <div class="job ral">
+                        <h3>
+                            <div class="left">University of Maryland, College Park</div>
+                            <div class="right">Graduated: May 2008</div>
+                        </h3>
+                        <ul>
+                            <li>Bachelor's of Science, Information Systems</li>
+                            <li>Robert H. Smith School of Business</li>
+                        </ul>
+                    </div>
+
+                    <div class="job ral">
+                        <h3>
+                            <div class="left">AWS Solution Architect - Associate</div>
+                            <div class="right">Feb 2021 - Feb 2024</div>
+                        </h3>
+                        <ul>
+                            <li>Credential ID: JBC76P3KC2QQQQKE</li>
+                        </ul>
+                    </div>
+                </div><!-- edu -->
+                
+                <div class="section">
+                    <p class="subtitle ral">Technical Skills</p>
+                    <div class="grid-container rob">
+                        <div>Python</div>
+                        <div>Mulesoft</div>
+                        <div>Lambda/DynamoDB</div>
+                        <div>SQL</div>
+                        <div>Ansible</div>
+                        <div>Cloudfront/Route 53</div>
+                        <div>CSS</div>
+                        <div>Docker</div>
+                        <div>SAM/Cloudformation</div>
+                        <div>Git</div>
+                        <div>Jenkins</div>
+                        <div>EC2/ALB</div>
+                    </div>
+                </div><!-- skills -->
+                
+                <div class="section">
+                    <p class="subtitle ral">Projects</p>
+                    <div class="job ral">
+                        <h3>
+                            <div class="left">Cloud Resume Challenge</div>
+                            <div class="right">Jan 2022</div>
+                        </h3>
+                        <p>Blog Post: <a href="https://www.linkedin.com/posts/thomas-liu-dc_cloudresumechallenge" target="_blank">A newbie's guide to navigating AWS</a></p>
+                        <p>Original Project Link: <a href="https://cloudresumechallenge.dev/instructions/" target="_blank">Resume Challenge by Forrest Brazeal</a></p>
+                        <p>Building a static webpage from the ground up with a NoSQL database, API gateway, custom DNS, HTTP security, and serverless functions written in Python.  Package the solution into a serverless application model (SAM) template utilizing Amazon's wide variety of cloud services.</p>
+
+                        <h3>
+                            <div class="left">Interview Coding Challenge</div>
+                            <div class="right">Nov 2021</div>
+                        </h3>
+                        <p>Mulesoft Public Exchange: <a href="https://anypoint.mulesoft.com/exchange/portals/t-liu-production/de48bde8-7e89-4a67-94ff-67481f7b3cd2/twitter-api" target="_blank">API Documentation</a></p>
+                        <p>Design, develop, and deploy a public API using Mulesoft Anypoint Platform to get the latest tweets and list of hashtags for a given keyword and last n hours from Twitter's API.  This project was part of a coding challenge for an interview process with a leading life science company.</p>
+                    </div>
+                </div><!-- projects -->
+            </div><!--// body -->
+
+            <div id="footer">
+                <p>This webpage/resume is made with love. And AWS.</p>
+                <p>It was last viewed on <a id='lastViewedDate'></a></p>
+                <p>You are visitor number <a id='visitorCount'></a> </p>
+            </div><!--// footer -->
+
+        </div><!-- // inner -->
+    </div><!--// doc -->
+</body>
+</html>
