@@ -1,6 +1,6 @@
 # Cloud Resume Challenge
 
-Static HTML webpage with custom CSS hosted on AWS as part of the Cloud Resume Challenge (https://cloudresumechallenge.dev/docs/the-challenge/).  This is the front end part of the challenge.
+Static HTML webpage with custom CSS hosted on AWS as part of the Cloud Resume Challenge (https://cloudresumechallenge.dev/docs/the-challenge/).  This is the front end part of the project.
 
 ### Technologies/languages used to build this webpage
 * Website/Resume:

@@ -1,4 +1,4 @@
-const apiUrl = 'https://kohwbp8yt4.execute-api.us-east-1.amazonaws.com/dev/visitor';
+const apiUrl = 'https://j8nbni6pph.execute-api.us-east-1.amazonaws.com/Prod/visitor/';
 
 function getVisitorCount() {
     fetch(apiUrl)
@@ -7,8 +7,8 @@ function getVisitorCount() {
         })
         .then(data => {
             console.log(data)
-            let visitorCount = data.body.count.N
-            let lastViewedDate = data.body.lastViewed.S
+            let visitorCount = data.count.N
+            let lastViewedDate = data.lastViewed.S
 
             document.getElementById('visitorCount').innerHTML = visitorCount;
             document.getElementById('lastViewedDate').innerHTML = lastViewedDate;
