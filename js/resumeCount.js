@@ -11,7 +11,7 @@ function getVisitorCount() {
             let lastViewedDate = new Date(data.lastViewed.S)
 
             document.getElementById('visitorCount').innerHTML = visitorCount;
-            document.getElementById('lastViewedDate').innerHTML = lastViewedDate.toLocaleString([], { hour12: true});
+            document.getElementById('lastViewedDate').innerHTML = lastViewedDate.toString();
         })
         .catch(error => console.warn(error))
 }
