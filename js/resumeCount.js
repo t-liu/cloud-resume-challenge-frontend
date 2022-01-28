@@ -1,4 +1,4 @@
-const apiUrl = 'https://xzjdnhuz11.execute-api.us-east-1.amazonaws.com/Prod/visitor/';
+const apiUrl = 'https://api.thomasliu.click/visitor/';
 
 function getVisitorCount() {
     fetch(apiUrl)
