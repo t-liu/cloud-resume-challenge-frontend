@@ -111,10 +111,14 @@ li.contact-info {
 .job .left {
     text-align: left;
     display: table-cell;
+    width: 75%;
+    /* border-style: solid; */
 }
 .job .right {
     text-align: right;
     display: table-cell;
+    width: 25%;
+    /* border-style: solid; */
 }
 .grid-container {
     display: grid;
