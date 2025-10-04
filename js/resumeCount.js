@@ -1,4 +1,4 @@
-const apiUrl = 'https://resumeapi.thomasliu.click/';
+const apiUrl = 'https://resumeapi.thomasliu.click/visitor/';
 
 function getVisitorCount() {
     fetch(apiUrl)
