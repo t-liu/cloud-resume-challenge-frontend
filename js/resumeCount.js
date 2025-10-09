@@ -1,4 +1,4 @@
-const apiUrl = 'https://resumeapi.thomasliu.click/visitor/';
+const apiUrl = 'https://srlk15hmgb.execute-api.us-east-1.amazonaws.com/Prod/visitor/';
 
 function getVisitorCount() {
     fetch(apiUrl)
