@@ -7,8 +7,8 @@ function getVisitorCount() {
         })
         .then(data => {
             console.log(data)
-            let visitorCount = data.count.N
-            let lastViewedDate = new Date(data.lastViewed.S)
+            let visitorCount = data.count
+            let lastViewedDate = new Date(data.lastViewed)
 
             document.getElementById('visitorCount').innerHTML = visitorCount;
             document.getElementById('lastViewedDate').innerHTML = lastViewedDate.toLocaleString([], { hour12: true});
