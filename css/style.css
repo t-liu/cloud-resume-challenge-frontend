@@ -88,6 +88,8 @@ li.contact-info {
     width: 15px;
     height: 15px;
     vertical-align: baseline;
+    font-size: 15px;
+    margin-right: 5px;
 }
 .section {
     border-bottom: 1px solid #ccc; 
