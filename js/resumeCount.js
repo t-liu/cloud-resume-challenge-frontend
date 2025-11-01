@@ -35,20 +35,6 @@ function getVisitorCount() {
                     document.getElementById('lastViewedDate').innerHTML = 'You are the first visitor!';
                 }
             }
-            // Fallback for old API format (if you want backward compatibility)
-            else if (data.count) {
-                const visitorCount = data.count;
-                const previousLastViewedDate = data.previousLastViewed;
-                
-                document.getElementById('visitorCount').innerHTML = visitorCount;
-                
-                if (previousLastViewedDate) {
-                    const dateObj = new Date(previousLastViewedDate);
-                    document.getElementById('lastViewedDate').innerHTML = dateObj.toLocaleString([], { hour12: true });
-                } else {
-                    document.getElementById('lastViewedDate').innerHTML = 'First visit!';
-                }
-            }
             else {
                 console.error('Unexpected API response format:', data);
                 document.getElementById('visitorCount').innerHTML = '---';
