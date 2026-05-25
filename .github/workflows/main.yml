@@ -1,9 +1,9 @@
-
 name: deploy to aws s3 and invalidate cf cache
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -13,16 +13,26 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v6
 
-      - name: Invalidate Cloudfront
-        uses: chetan/invalidate-cloudfront-action@v2.4.2
-
-      # Sync all objects in root folder with S3 bucket
-      - name: aws s3 sync
-        uses: jakejarvis/s3-sync-action@v0.5.1
+      # Configure AWS credentials once for all later steps
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
         with:
-          args: --exclude '.gitignore' --exclude '.git*/*' --follow-symlinks --delete
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      # Sync files to S3
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} \
+            --exclude ".gitignore" \
+            --exclude ".git/*" \
+            --delete
+
+      # Invalidate CloudFront cache
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2.4.2
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'
+          DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+          PATHS: "/*"
+          AWS_REGION: us-east-1
