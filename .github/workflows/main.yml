@@ -1,34 +1,20 @@
-# This is a basic workflow to help you get started with GitHub Actions
 
 name: deploy to aws s3 and invalidate cf cache
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push request events but only for the main branch
   push:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-          
-      # Clears the CloudFront cache so new requests will receive the latest version of your app
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
       - name: Invalidate Cloudfront
-        uses: chetan/invalidate-cloudfront-action@v2.2
-        env:
-          DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-          PATHS: '/*'
-          AWS_REGION: 'us-east-1'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        uses: chetan/invalidate-cloudfront-action@v2.4.2
 
       # Sync all objects in root folder with S3 bucket
       - name: aws s3 sync
