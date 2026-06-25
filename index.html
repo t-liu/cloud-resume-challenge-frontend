@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <title>Thomas S. Liu | Resume</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Thomas Liu">
-    <meta name="keywords" content="Cloud, Resume, Challenge, Thomas, Liu, Booz, Allen, Salesforce, Integration, Engineer" />
+    <meta name="keywords"
+        content="Cloud, Resume, Challenge, Thomas, Liu, Booz, Allen, Salesforce, Elastic, Integration, Engineer" />
     <meta name="description" content="Cloud Resume Challenge portfolio site for Thomas Liu">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8338DJ379S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-8338DJ379S');
+    <!-- html2pdf for client-side PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Google tag (gtag.js) conditionally loaded -->
+    <script>
+        if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8338DJ379S';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            window.gtag = gtag;
+
+            gtag('js', new Date());
+            gtag('config', 'G-8338DJ379S');
+        } else {
+            console.log('Google Analytics disabled on localhost');
+        }
     </script>
-    
+
 </head>
 
 <body>
@@ -34,20 +51,26 @@
     <script src="js/resumeCount.js"></script>
 
     <div id="doc">
-        <div id="inner">      
+        <div id="inner">
             <div id="header">
                 <h2 class="name ral">Thomas S. Liu</h2>
                 <ul class="contact-info ral">
                     <li class="contact-info"><i class="fas fa-map-marker-alt icons"></i> Washington, DC </li>
-                    <li class="contact-info"><i class="fab fa-linkedin icons"></i><a href="https://www.linkedin.com/in/thomas-liu-tech" target="_blank"> linkedin.com/in/thomas-liu-tech </a></li>
-                    <li class="contact-info"><i class="fab fa-github icons"></i><a href="https://www.github.com/t-liu" target="_blank"> github.com/t-liu </a></li>
-                    <li class="contact-info"><i class="fab fa-envelope icons"></i><a href="mailto:thomas.s.liu@gmail.com"> thomas.s.liu@gmail.com </a></li>
+                    <li class="contact-info"><i class="fab fa-linkedin icons"></i><a
+                            href="https://www.linkedin.com/in/thomas-liu-tech" target="_blank">
+                            linkedin.com/in/thomas-liu-tech </a></li>
+                    <li class="contact-info"><i class="fab fa-github icons"></i><a href="https://www.github.com/t-liu"
+                            target="_blank"> github.com/t-liu </a></li>
+                    <li class="contact-info"><i class="fab fa-envelope icons"></i><a
+                            href="mailto:thomas.s.liu@gmail.com"> thomas.s.liu@gmail.com </a></li>
+                    <li class="contact-info" data-html2canvas-ignore="true"><i class="fas fa-file-pdf icons"></i><a
+                            href="#" id="download-pdf"> Download PDF </a></li>
                 </ul>
             </div><!--// header -->
 
             <div id="body">
-                
-                <div class="section">        
+
+                <div class="section">
                     <p class="subtitle ral">Work Experience</p>
 
                     <div class="job ral">
@@ -57,17 +80,25 @@
                             <div class="right">Present</div>
                         </h4>
                         <ul>
-                            <li>Architected and standardized a centralized CI/CD framework using reusable GitHub Actions workflows, migrating 
-                                fragmented legacy release processes to a streamlined GitFlow model that reduced deployment friction and 
+                            <li>Architected and standardized a centralized CI/CD framework using reusable GitHub Actions
+                                workflows, migrating
+                                fragmented legacy release processes to a streamlined GitFlow model that reduced
+                                deployment friction and
                                 improved cross-environment stability.</li>
-                            <li>Re-architected a legacy batch-based Talend integration between NetSuite and Salesforce into an event-driven 
-                                integration platform using MuleSoft and AWS SQS, reducing system coupling and improving scalability, resiliency, 
+                            <li>Re-architected a legacy batch-based Talend integration between NetSuite and Salesforce
+                                into an event-driven
+                                integration platform using MuleSoft and AWS SQS, reducing system coupling and improving
+                                scalability, resiliency,
                                 and operational observability.</li>
-                            <li>Designed and implemented a team-wide, Python-based integration testing framework for business critical APIs, 
-                                enabling automated regression testing within GitHub Actions pipelines, reducing manual QA effort by 75%, 
+                            <li>Designed and implemented a team-wide, Python-based integration testing framework for
+                                business critical APIs,
+                                enabling automated regression testing within GitHub Actions pipelines, reducing manual
+                                QA effort by 75%,
                                 and optimizing it for team-wide adoption via custom AI agent workflows</li>
-                            <li>Developed AI-powered engineering agent skills for MuleSoft development workflows, including pair programming 
-                                assistance, automated test generation, and PR code review validation based on team-defined engineering standards.</li>
+                            <li>Developed AI-powered engineering agent skills for MuleSoft development workflows,
+                                including pair programming
+                                assistance, automated test generation, and PR code review validation based on
+                                team-defined engineering standards.</li>
                         </ul>
                     </div>
 
@@ -78,19 +109,25 @@
                             <div class="right">March 2022 - October 2025</div>
                         </h4>
                         <ul>
-                            <li>Refactored complex Snowflake stored procedures that ingested and enriched customer usage data into smaller,
+                            <li>Refactored complex Snowflake stored procedures that ingested and enriched customer usage
+                                data into smaller,
                                 modular, and maintainable SQL scripts and Apache Airflow DAGs.</li>
-                            <li>Strengthened test-driven development practices by designing and writing robust AWS Lambda unit and
+                            <li>Strengthened test-driven development practices by designing and writing robust AWS
+                                Lambda unit and
                                 integration tests using Python and pytest for a marketing data ingestion project.</li>
-                            <li>Designed and implemented Workato recipes to close billing and revenue recognitions for active contracts in
-                                Slack’s Workday Financials as part of a company-wide initiative to migrate into Salesforce's internal systems.</li>
-                            <li>Led Salesforce Apex development for a post-MVP initiative enabling multi-contract support, implementing
+                            <li>Designed and implemented Workato recipes to close billing and revenue recognitions for
+                                active contracts in
+                                Slack’s Workday Financials as part of a company-wide initiative to migrate into
+                                Salesforce's internal systems.</li>
+                            <li>Led Salesforce Apex development for a post-MVP initiative enabling multi-contract
+                                support, implementing
                                 scalable code patterns to handle concurrent active contracts.</li>
-                            <li>Drove continuous improvement of Mulesoft applications by introducing new schedulers, refining error
+                            <li>Drove continuous improvement of Mulesoft applications by introducing new schedulers,
+                                refining error
                                 handling, and upgrading runtimes to enhance scalability and resilience.</li>
                         </ul>
                     </div>
-                            
+
                     <div class="job ral">
                         <h3>Booz Allen Hamilton</h3>
                         <h4>
@@ -98,24 +135,32 @@
                             <div class="right">March 2016 - Jan 2022</div>
                         </h4>
                         <ul>
-                            <li>Designed and developed an integration using Mulesoft Anypoint Studio that sourced data from Workday and 
-                                loaded it into Salesforce-based risk management application; leveraged AWS SQS for SFDC status checks.</li>
-                            <li>Refactored an integration that sends employee badging information from on-premise MS SQL Server to Dynamics 365 
-                                via Microsoft Graph API with OData system query, including distributed caching of bearer tokens.</li>
-                            <li>Redesigned an API that sends email notifications, incorporating Apache Kafka for message queuing and MongoDB 
+                            <li>Designed and developed an integration using Mulesoft Anypoint Studio that sourced data
+                                from Workday and
+                                loaded it into Salesforce-based risk management application; leveraged AWS SQS for SFDC
+                                status checks.</li>
+                            <li>Refactored an integration that sends employee badging information from on-premise MS SQL
+                                Server to Dynamics 365
+                                via Microsoft Graph API with OData system query, including distributed caching of bearer
+                                tokens.</li>
+                            <li>Redesigned an API that sends email notifications, incorporating Apache Kafka for message
+                                queuing and MongoDB
                                 for persistent storage, improving reliability and ensuring delivery guarantees.</li>
-                            <li>Refactored Ansible playbooks and templates to include Hashicorp Vault API calls for retrieving application level 
-                                passwords and secrets, enabling secure and automated credential management as part of CI/CD processes.</li> 
-                            <li>Developed and maintained Postman collections and environments to facilitate debugging, testing, and verification of APIs, 
+                            <li>Refactored Ansible playbooks and templates to include Hashicorp Vault API calls for
+                                retrieving application level
+                                passwords and secrets, enabling secure and automated credential management as part of
+                                CI/CD processes.</li>
+                            <li>Developed and maintained Postman collections and environments to facilitate debugging,
+                                testing, and verification of APIs,
                                 ensuring seamless integration and deployment workflows.</li>
                         </ul>
                     </div>
 
                 </div><!-- work -->
 
-                <div class="section">        
+                <div class="section">
                     <p class="subtitle ral">Education</p>
-                            
+
                     <div class="job ral">
                         <h3>
                             <div class="left">University of Maryland, College Park</div>
@@ -138,7 +183,7 @@
                         </ul>
                     </div>
                 </div><!-- edu -->
-                
+
                 <div class="section">
                     <p class="subtitle ral">Technical Skills</p>
                     <div class="grid-container rob">
@@ -158,7 +203,7 @@
                         <div>Ansible</div>
                     </div>
                 </div><!-- skills -->
-                
+
                 <div class="section">
                     <p class="subtitle ral">Projects</p>
                     <div class="job ral">
@@ -166,21 +211,33 @@
                             <div class="left">Cloud Resume Challenge</div>
                             <div class="right">Jan 2022</div>
                         </h3>
-                        <p>Blog Post: <a href="https://t-liu.medium.com/oh-just-another-cloud-resume-challenge-blog-2f0700279747" target="_blank">Just Another Cloud Resume Challenge Blog</a></p>
-                        <p>Original Project Link: <a href="https://cloudresumechallenge.dev/instructions/" target="_blank">Resume Challenge by Forrest Brazeal</a></p>
-                        <p>Building a static webpage from the ground up with a NoSQL database, API gateway, custom DNS, HTTP security, and serverless functions written in Python.  Package the solution into a serverless application model (SAM) template utilizing Amazon's wide variety of cloud services.</p>
+                        <p>Blog Post: <a
+                                href="https://t-liu.medium.com/oh-just-another-cloud-resume-challenge-blog-2f0700279747"
+                                target="_blank">Just Another Cloud Resume Challenge Blog</a></p>
+                        <p>Original Project Link: <a href="https://cloudresumechallenge.dev/instructions/"
+                                target="_blank">Resume Challenge by Forrest Brazeal</a></p>
+                        <p>Building a static webpage from the ground up with a NoSQL database, API gateway, custom DNS,
+                            HTTP security, and serverless functions written in Python. Package the solution into a
+                            serverless application model (SAM) template utilizing Amazon's wide variety of cloud
+                            services.</p>
 
                         <h3>
-                            <div class="left">Interview Coding Challenge</div>
-                            <div class="right">Nov 2021</div>
+                            <div class="left">Personal Portfolio</div>
+                            <div class="right">Feb 2022</div>
                         </h3>
-                        <p>Mulesoft Public Exchange: <a href="https://anypoint.mulesoft.com/exchange/portals/t-liu-production/de48bde8-7e89-4a67-94ff-67481f7b3cd2/twitter-api" target="_blank">API Documentation</a></p>
-                        <p>Design, develop, and deploy a public API using Mulesoft Anypoint Platform to get the latest tweets and list of hashtags for a given keyword and last n hours from Twitter's API.  This project was part of a coding challenge for an interview process with a leading life science company.</p>
+                        <p>Link to website: <a href="https://thomasliu.click" target="_blank">Here</a></p>
+                        <p>Inspiration on building one: <a
+                                href="https://medium.com/swlh/building-a-personal-coding-portfolio-website-60ccc6137f3"
+                                target="_blank"></a>Building a Personal Coding Portfolio Website</p>
+                        <p>Design, develop, and deploy a custom website to display personal projects and demonstrate a
+                            variety of cloud and software engineering skills. Website was originally designed in Webflow
+                            and converted to a dynamic Vue.js application while maintaining the original design
+                            aesthetic.</p>
                     </div>
                 </div><!-- projects -->
             </div><!--// body -->
 
-            <div id="footer">
+            <div id="footer" data-html2canvas-ignore="true">
                 <p>This webpage/resume is made with love. And AWS.</p>
                 <p>It was last viewed by someone on <a id='lastViewedDate'></a></p>
                 <p>Number of visits: <a id='visitorCount'></a> </p>
@@ -188,5 +245,8 @@
 
         </div><!-- // inner -->
     </div><!--// doc -->
+
+    <script src="js/pdfDownload.js"></script>
 </body>
+
 </html>
