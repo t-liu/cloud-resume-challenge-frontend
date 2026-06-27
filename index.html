@@ -20,10 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-    <!-- html2pdf for client-side PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <!-- Google tag (gtag.js) conditionally loaded -->
     <script>
@@ -63,8 +60,8 @@
                             target="_blank"> github.com/t-liu </a></li>
                     <li class="contact-info"><i class="fab fa-envelope icons"></i><a
                             href="mailto:thomas.s.liu@gmail.com"> thomas.s.liu@gmail.com </a></li>
-                    <li class="contact-info" data-html2canvas-ignore="true"><i class="fas fa-file-pdf icons"></i><a
-                            href="#" id="download-pdf"> Download PDF </a></li>
+                    <li class="contact-info"><i class="fas fa-file-pdf icons"></i><a
+                            href="https://docs.google.com/document/d/1BeOsultHt0rv4CjWn6b5bP7fXVejJQx5/export?format=pdf" target="_blank" id="download-pdf"> Download PDF </a></li>
                 </ul>
             </div><!--// header -->
 
@@ -228,7 +225,7 @@
                         <p>Link to website: <a href="https://thomasliu.click" target="_blank">Here</a></p>
                         <p>Inspiration on building one: <a
                                 href="https://medium.com/swlh/building-a-personal-coding-portfolio-website-60ccc6137f3"
-                                target="_blank"></a>Building a Personal Coding Portfolio Website</p>
+                                target="_blank">Building a Personal Coding Portfolio Website</a></p>
                         <p>Design, develop, and deploy a custom website to display personal projects and demonstrate a
                             variety of cloud and software engineering skills. Website was originally designed in Webflow
                             and converted to a dynamic Vue.js application while maintaining the original design
@@ -237,7 +234,7 @@
                 </div><!-- projects -->
             </div><!--// body -->
 
-            <div id="footer" data-html2canvas-ignore="true">
+            <div id="footer">
                 <p>This webpage/resume is made with love. And AWS.</p>
                 <p>It was last viewed by someone on <a id='lastViewedDate'></a></p>
                 <p>Number of visits: <a id='visitorCount'></a> </p>
@@ -245,8 +242,6 @@
 
         </div><!-- // inner -->
     </div><!--// doc -->
-
-    <script src="js/pdfDownload.js"></script>
 </body>
 
 </html>
